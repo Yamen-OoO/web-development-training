@@ -1,0 +1,188 @@
+html{
+    font-size: 16px;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    min-height: 300vh;
+}
+
+.default{
+    color: #aaa;
+}
+#uniqe{
+    color: gold;
+}
+
+hr{
+    border: 5px solid red;
+}
+
+/** text properties */
+.text-example{
+    color: red;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: line-through;
+    letter-spacing: 4px;
+    line-height: 1.5;
+}
+
+
+/** backgroud properties */
+.bg-example{
+    color: white;
+    background-color: aqua;
+    /* background: linear-gradient(45deg,red,yellow); */
+    /* background-image: url(one.jpg); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background: url(one.jpg) no-repeat cover ; */
+}
+
+
+
+/* *width & height properties */
+.size-example{
+    /* fixed width */
+    width: 300px;
+    height: 150px;
+    background-color: blue;
+}
+
+.max-width-example{
+    /* responsive width */
+    max-width: 700px;
+    width: 100%;
+    background-color: lightblue;
+    text-align: center;
+    padding: 10px;
+}
+
+.auto-example{
+    /* default : the width of the content */
+    width: auto;
+    height: 10px;
+    background-color: lightgreen;
+}
+
+
+/* *css units properties */
+.units-example{
+    /* aboslitue */
+    font-size: 16px;
+
+    /* relative */
+    width: 50%;
+    padding: 2em; /* 32px */
+    margin: 1rem; /*16px */
+
+    min-height: 50vh ;
+    /* height: 100%; */
+    max-width: 80vw;
+}
+
+.parent{
+    font-size: 20px;
+    background-color: #ddd;
+    padding: 10px;
+}
+.child-em{
+    font-size: 1.5em;
+    background-color: lightblue;
+}
+.child-rem{
+    font-size: 1.5rem;
+    background-color: lightblue;
+}
+
+
+/* *css utilites properties */
+.m-10{
+    margin: 10px 10px 10px 10px;
+    margin: 20px 10px;
+    margin: 10px 20px 30px;
+
+} 
+.p-20{
+    padding: 10px 20px 20px 10px;
+    padding: 20px 10px;
+
+}
+.rounded{
+    border: 1px solid red;
+    border-radius: 20px;
+
+} 
+.shadow{
+    box-shadow: 2px 2px 5px red;
+}
+
+
+
+
+
+/* *css boxsizing properties */
+.without-box-sizing{
+    box-sizing: content-box;
+    width: 200px;
+    padding: 20px;
+    border: 5px solid red;
+    background-color: blue;
+    /* 200 + 40 + 10 */
+}
+
+.with-box-sizing{
+    box-sizing: border-box;
+    width: 200px;
+    padding: 20px;
+    border: 5px solid red;
+    background-color: rgb(100, 100, 245);
+    /* 200px */
+}
+
+
+.sticky-header{
+    position: sticky;
+    top: 10px;
+    background-color: red;
+    color: white;
+    padding: 10px;
+}
+
+
+
+.container{
+    position: relative;
+    height: 500px;
+    background-color: brown;
+}
+.static-box{
+    position: static;
+    background-color: green;
+}
+.relative-box{
+    position: relative;
+    top: 10px;
+    left: 20px;
+    background-color: rgb(0, 87, 128);
+}
+.absolute-box{
+    top: 100px;
+    left: 300px;
+    position: absolute;
+    background-color: rgb(7, 255, 7);
+}
+
+.fixed-box{
+    position: fixed;
+    bottom: 20px;
+    right: 100px;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
