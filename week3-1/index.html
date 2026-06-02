@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            outline: 1px solid red;
+        }
+        body{
+            min-height: 400vh;
+            height: 100%;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 10px;
+        }
+        .highlight{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">
+        dom demo
+    </h1>
+    <button class="btn">click me</button>
+    <div id="content">Original text</div>
+    <div class="box"></div>
+    <ul id="list" data-contnet="text">
+        <li>itme 1</li>
+        <li>item 2</li>
+    </ul>
+    <button onclick="addItem()">Add Item</button>
+    <button onclick="removeItem()">Delete Item</button>
+    <button id="styleBtn">edit style</button>
+    <div id="output"></div>
+</body>
+<script src="script.js"></script>
+</html>
