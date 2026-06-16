@@ -1,0 +1,335 @@
+/*! Media query sytnax */
+/* @media media-type and (condition){
+} */
+/* all , screen , print */
+/* width , min-width , max-width , aspect-ratio , hieght ,  */
+/* and , or , not , only */
+/* @media (min-width:450px) and (max-width:600px) {
+    
+}
+@media (400px <= width <= 800px) {
+    background-color: red;
+} */
+/* 700px < x < 900px */
+
+/* example breakpoints:
+mobile <600px |||||||| 601px < tablet < 768px ||||||| 769px < desktop < 992px  */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: lightblue;
+}
+.box{
+    background-color: orangered;
+    padding: 20px;
+    margin: 10px;
+}
+
+ html{
+        font-size:12px ;
+}
+.container{
+    display: block;
+}
+
+
+
+@media (min-width:600px) {
+    html{
+        font-size:14px ;
+    }
+    body{
+        background-color: lightgreen;
+    }
+    .container{
+        display: flex;
+    }
+    .box{
+        flex: 1;
+    }
+}
+@media (min-width:900px) {
+    html{
+        font-size:16px ;
+    }
+    body{
+        background-color: brown;
+    }
+}
+
+/* 1. LAYOUT & CONTAINER CLASSES
+.container (fixed-width responsive container)
+.container-fluid (full-width container)
+.container-sm (100% wide until small breakpoint)
+.container-md (100% wide until medium breakpoint)
+.container-lg (100% wide until large breakpoint)
+.container-xl (100% wide until extra large breakpoint)
+.container-xxl (100% wide until extra extra large breakpoint)
+
+.row (horizontal group of columns)
+.col (equal-width column)
+.col-1 through col-12 (column spanning 1 to 12 columns)
+.col-sm-1 through col-sm-12 (column at small breakpoint)
+.col-md-1 through col-md-12 (column at medium breakpoint)
+.col-lg-1 through col-lg-12 (column at large breakpoint)
+.col-xl-1 through col-xl-12 (column at extra large breakpoint)
+.row-cols-1 through row-cols-6 (number of columns per row)
+
+2. SPACING (MARGIN & PADDING)
+
+.m-0 (margin: 0)
+.m-1 (margin: 0.25rem)
+.m-2 (margin: 0.5rem)
+.m-3 (margin: 1rem)
+.m-4 (margin: 1.5rem)
+.m-5 (margin: 3rem)
+.m-auto (margin: auto)
+.mt-0 through mt-5 (margin-top)
+.mb-0 through mb-5 (margin-bottom)
+.ms-0 through ms-5 (margin-left)
+.me-0 through me-5 (margin-right)
+.mx-auto (margin-left: auto; margin-right: auto)
+.mx-0 through mx-5 (margin-left and right)
+.my-0 through my-5 (margin-top and bottom)
+.p-0 through p-5 (padding all sides)
+.pt-0 through pt-5 (padding-top)
+.pb-0 through pb-5 (padding-bottom)
+.ps-0 through ps-5 (padding-left)
+.pe-0 through pe-5 (padding-right)
+.py-0 through py-5 (padding-top and bottom)
+.px-0 through px-5 (padding-left and right)
+
+3. TYPOGRAPHY - TEXT ALIGNMENT
+.text-start (left-aligned text)
+.text-center (center-aligned text)
+.text-end (right-aligned text)
+.text-justify (justified text)
+.text-wrap (wrap text)
+.text-nowrap (prevent text wrapping)
+
+
+4. TYPOGRAPHY - TEXT TRANSFORMATION
+.text-lowercase (lowercase text)
+.text-uppercase (uppercase text)
+.text-capitalize (capitalized text)
+
+5. TYPOGRAPHY - TEXT COLORS
+.text-primary (blue)
+.text-secondary (gray)
+.text-success (green)
+.text-danger (red)
+.text-warning (yellow)
+.text-info (cyan)
+.text-light (light gray)
+.text-dark (dark gray)
+.text-white (white)
+.text-body (default body color)
+.text-muted (muted/faded color)
+.text-black-50 (black with 50% opacity)
+.text-white-50 (white with 50% opacity)
+
+6. TYPOGRAPHY - TEXT STYLES & WEIGHTS
+.display-1 (5rem / 80px heading)
+.display-2 (4.5rem / 72px heading)
+.display-3 (4rem / 64px heading)
+.display-4 (3.5rem / 56px heading)
+.display-5 (3rem / 48px heading)
+.display-6 (2.5rem / 40px heading)
+.lead (makes paragraph stand out)
+.small (smaller text)
+.mark (highlighted text)
+.text-decoration-underline (underlined text)
+.text-decoration-line-through (strikethrough)
+.text-decoration-none (no text decoration)
+.fw-bold (bold text)
+.fw-bolder (bolder text)
+.fw-normal (normal weight)
+.fw-light (light weight)
+.fw-lighter (lighter weight)
+.fst-italic (italic text)
+.fst-normal (normal style)
+.lh-1 (line-height: 1)
+.lh-sm (line-height: 1.25)
+.lh-base (line-height: 1.5)
+.lh-lg (line-height: 2)
+
+7. BACKGROUND COLORS
+.bg-primary (blue background)
+.bg-secondary (gray background)
+.bg-success (green background)
+.bg-danger (red background)
+.bg-warning (yellow background)
+.bg-info (cyan background)
+.bg-light (light gray background)
+.bg-dark (dark background)
+.bg-white (white background)
+.bg-transparent (transparent)
+.bg-gradient (gradient background)
+.bg-black (black background)
+
+8. BORDERS
+.border (adds border on all sides)
+.border-0 (remove all borders)
+.border-top (top border only)
+.border-bottom (bottom border only)
+.border-start (left border only)
+.border-end (right border only)
+.border-top-0 (remove top border)
+.border-bottom-0 (remove bottom border)
+.border-start-0 (remove left border)
+.border-end-0 (remove right border)
+
+9. BORDER COLORS
+.border-primary (blue border)
+.border-secondary (gray border)
+.border-success (green border)
+.border-danger (red border)
+.border-warning (yellow border)
+.border-info (cyan border)
+.border-light (light border)
+.border-dark (dark border)
+.border-white (white border)
+
+10. BORDER RADIUS
+.rounded (0.375rem radius)
+.rounded-0 (no radius)
+.rounded-1 (0.25rem radius)
+.rounded-2 (0.375rem radius)
+.rounded-3 (0.5rem radius)
+.rounded-circle (50% radius - circle shape)
+.rounded-pill (pill shape)
+.rounded-top (top corners only)
+.rounded-bottom (bottom corners only)
+.rounded-start (left corners only)
+.rounded-end (right corners only)
+
+11. DISPLAY CLASSES
+.d-none (hide element)
+.d-inline (display inline)
+.d-inline-block (display inline-block)
+.d-block (display block)
+.d-flex (display flex container)
+.d-inline-flex (display inline flex)
+.d-grid (display grid)
+.d-table (display table)
+.d-table-cell (display table cell)
+.visible (make element visible)
+.invisible (hide element but keeps space)
+
+12. RESPONSIVE DISPLAY
+.d-sm-none (hide on small screens and up)
+.d-md-inline (inline on medium screens and up)
+.d-lg-block (block on large screens and up)
+.d-xl-flex (flex on extra large screens and up)
+.d-xxl-grid (grid on extra extra large screens and up)
+
+13. FLEXBOX - DIRECTION
+.flex-row (horizontal direction - default)
+.flex-row-reverse (horizontal reversed)
+.flex-column (vertical direction)
+.flex-column-reverse (vertical reversed)
+
+14. FLEXBOX - JUSTIFY CONTENT (HORIZONTAL)
+.justify-content-start (align to start - default)
+.justify-content-end (align to end)
+.justify-content-center (align to center)
+.justify-content-between (space between items)
+.justify-content-around (space around items)
+.justify-content-evenly (evenly distributed)
+
+15. FLEXBOX - ALIGN ITEMS (VERTICAL)
+.align-items-start (align to top)
+.align-items-end (align to bottom)
+.align-items-center (align to center)
+.align-items-baseline (align to baseline)
+.align-items-stretch (stretch to fill - default)
+
+16. FLEXBOX - ALIGN SELF
+.align-self-start (align self to top)
+.align-self-end (align self to bottom)
+.align-self-center (align self to center)
+.align-self-baseline (align self to baseline)
+.align-self-stretch (stretch self)
+
+17. FLEXBOX - WRAP
+.flex-wrap (wrap items - default)
+.flex-nowrap (don't wrap items)
+.flex-wrap-reverse (wrap in reverse order)
+
+18. FLEXBOX - GAP (SPACING BETWEEN ITEMS)
+.gap-0 (gap: 0)
+.gap-1 (gap: 0.25rem)
+.gap-2 (gap: 0.5rem)
+.gap-3 (gap: 1rem)
+.gap-4 (gap: 1.5rem)
+.gap-5 (gap: 3rem)
+
+19. SIZING
+.w-25 (width: 25%)
+.w-50 (width: 50%)
+.w-75 (width: 75%)
+.w-100 (width: 100%)
+.w-auto (auto width)
+.h-25 (height: 25%)
+.h-50 (height: 50%)
+.h-75 (height: 75%)
+.h-100 (height: 100%)
+.h-auto (auto height)
+.mw-100 (max-width: 100%)
+.mh-100 (max-height: 100%)
+.vw-100 (viewport width: 100%)
+.vh-100 (viewport height: 100%)
+.min-vw-100 (min viewport width: 100%)
+.min-vh-100 (min viewport height: 100%)
+
+20. SHADOWS
+.shadow-none (no shadow)
+.shadow-sm (small shadow)
+.shadow (regular shadow)
+.shadow-lg (large shadow)
+
+21. POSITION
+.position-static (static position)
+.position-relative (relative position)
+.position-absolute (absolute position)
+.position-fixed (fixed position)
+.position-sticky (sticky position)
+.top-0 (top: 0)
+.top-50 (top: 50%)
+.top-100 (top: 100%)
+.bottom-0 (bottom: 0)
+.bottom-50 (bottom: 50%)
+.bottom-100 (bottom: 100%)
+.start-0 (left: 0)
+.start-50 (left: 50%)
+.start-100 (left: 100%)
+.end-0 (right: 0)
+.end-50 (right: 50%)
+.end-100 (right: 100%)
+.translate-middle (center element)
+.translate-middle-x (center horizontally)
+.translate-middle-y (center vertically)
+
+22. BUTTONS
+.btn (base button class - required)
+.btn-primary (primary blue button)
+.btn-secondary (secondary gray button)
+.btn-success (success green button)
+.btn-danger (danger red button)
+.btn-warning (warning yellow button)
+.btn-info (info cyan button)
+.btn-light (light button)
+.btn-dark (dark button)
+.btn-link (link styled as button)
+.btn-outline-primary (outline blue button)
+.btn-outline-secondary (outline gray button)
+.btn-outline-success (outline green button)
+.btn-outline-danger (outline red button)
+.btn-outline-warning (outline yellow button)
+.btn-outline-info (outline cyan button)
+.btn-outline-light (outline light button)
+.btn-outline-dark (outline dark button)
+.btn-lg (large button)
+.btn-sm (small button)
+.btn-block (full width button - deprecated use w-100) */
