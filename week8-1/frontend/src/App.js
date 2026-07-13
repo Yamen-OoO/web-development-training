@@ -33,8 +33,8 @@ function App() {
       </StoreProvider> */}
 
       {/* section three*/}
-      {/* <UserList /> */}
-      <Settings />
+      <UserList />
+      {/* <Settings /> */}
 
     </>
   );

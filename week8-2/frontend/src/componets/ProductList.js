@@ -19,7 +19,7 @@ function ProductList() {
         }
         else if(sortBy === 'name'){
             result.sort((a,b)=> a.name.localeCompare(b.name))
-        }
+                }
 
 
         return result
